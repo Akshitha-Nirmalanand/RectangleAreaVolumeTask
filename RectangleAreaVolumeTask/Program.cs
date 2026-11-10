@@ -23,24 +23,28 @@
             width = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter length: ");
             length = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter height: ");
-            height = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter height (enter -1 to ignore): ");
+            height = Convert.ToInt32(Console.ReadLine());
 
             int answer = RectangleCalculator(width, length, height);
             if (height == -1)
             {
                 Console.WriteLine($"Area = {answer}");
             }
+            else
+            {
+                Console.WriteLine($"Volume = {answer}");
+            }
         }
         static int RectangleCalculator(int width, int length,int height) { 
              
             if (height == -1) // if it is area
             {
-
-            }else // if it is volume
+                return width * length;
+            }
+            else // if it is volume
             {
-
+                return width * length * height;
             }
             return 0; // should never happen
         
