@@ -20,7 +20,11 @@
 
             int width, length, height;
             Console.Write("Enter width: ");
-            width = Console.ReadLine();
+            width = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter length: ");
+            length = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter height: ");
+            height = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter height (enter -1 to ignore): ");
 
             int answer = RectangleCalculator(width, length, height);
